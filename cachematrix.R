@@ -1,7 +1,6 @@
-## Put comments here that give an overall description of what your
-## functions do
-
-## Write a short comment describing this function
+## this function creates a special "matrix", which is really a list containing a function to
+## set matrix, get matrix, set inverse of matrix, get inverse of matrix
+## function creates an error message if input is not a matrix
 
 makeCacheMatrix <- function(x = matrix()) {
   if(!is.matrix(x)){
@@ -16,10 +15,12 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## this function solve a matrix(get inverse of it), 
+## this function also checks if inverse of matrix already calculated if so get inverse from cache
+## this function assumes matrix is invertable
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
+      
 i = x$get_catched()
   if(!is.null(i)) {
     message("getting cached data")
